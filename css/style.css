@@ -1,0 +1,379 @@
+* { padding: 0; margin: 0;}
+a { text-decoration: none; color: #8B0000; font-weight: 600;}
+li {list-style-type: none;}
+html, body { height: 100%;}
+/*Шапка сайта*/
+nav {width: 100%;}
+.menu {
+   width: 100%; 
+   height: 100%; 
+   font-size: 18pt; 
+   display: flex; 
+   justify-content: space-around;
+   align-items: center;
+   font-family: 'Underdog', cursive;
+   }
+.menu > li > a:hover {
+   color: #C71585;
+   border-bottom: 2px solid;
+   }
+.sitecap {
+   width: 100%;
+   height: 10%;
+   display: flex; 
+   }
+/*Кнопка звонка*/
+.phoneBlock {
+    position: absolute;
+	left:50%;
+	margin-left:-5em; 
+	width: 10em;
+	height: 10em;
+	background: #fff;
+	border-radius: 5em;
+	z-index: 2;
+    }	
+.phoneButton {
+    position: absolute;
+	left:50%;
+	margin-left:-3.125em;
+	margin-top: 1.875em;
+    width: 6.25em;
+	height: 6.25em;
+	background: #008000;
+	border-radius: 3.125em;
+	z-index: 3;
+	cursor: pointer;
+	animation: pulse-button 1s infinite;
+	background-image: url(../image/phone.png);	
+    }
+#overlay {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    text-align: center;
+	z-index: 5000;
+    }
+#overlay:after {
+    display: inline-block;
+    height: 100%;
+    width: 0;
+    vertical-align: middle;
+    content: '';
+    }
+.popup {
+    display: inline-block;
+    position: relative;
+    max-width: 80%;
+    padding: 20px;
+    border-radius: 15px; 
+    background: #fff;
+    vertical-align: middle;
+	border: 3px solid;
+	border-color: #008000;
+    }
+.popup__valignfix {
+    display: inline-block;
+    width: 0;
+    height: 100%;
+    vertical-align: middle;
+    }
+.popup__close {
+    display: block;
+    position: absolute;
+    top: -18px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: #008000;
+    text-align: center;
+    font-size: 12px;
+    line-height: 25px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    cursor:pointer;
+    }
+.popup__close:hover {
+    background: #FF0000;
+    }
+#logInp {
+    height: 40px;
+    width: 240px;
+    padding-left: 10px;
+    border: 2px solid #008000;
+    border-radius: 5px;
+    outline: none;
+    background: #F9F0DA;
+    color: #9E9C9C;
+    }
+#logBut {
+    height: 40px;
+    width: 100px;
+    border: 2px solid #008000;
+    border-radius: 5px;
+    color: #000;
+    font-size: 0.8em;
+    padding: 0.1em;
+    background-color:#fff;
+    cursor: pointer;
+    }
+#logBut:hover {
+    color: #fff;
+    background-color:#008000;
+    }
+/*Анимация кнопки*/
+@keyframes pulse-button {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.5);
+    }
+ 
+  100% {
+    box-shadow: 0 0 0 40px rgba(0, 0, 0, 0);
+    }
+}	
+/*Контент*/
+#product { 
+    width: 100%;
+	height: 90%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	Justify-content: space-evenly;
+    }
+form {text-align: center; margin-top: 1em;}
+textarea { width: 80%; border-radius: 10px; border: 2px solid #49aa53; padding: 10px; resize: none; outline:none;}
+input { width: 80%; height: 30px; border-radius: 10px; border: 2px solid #49aa53; padding-left: 10px; outline:none;}
+.content {
+    position: relative;
+    width: 25%;
+	height: 100%;
+	overflow: hidden;
+    }
+.div1 {     
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    perspective: 300px;
+    transform:perspective(500px);
+    transform-style: preserve-3d;
+	background-color: #fff;
+	cursor: pointer;
+	z-index: 1;
+	backface-visibility: hidden;
+	text-align: center;
+    }
+.imgBackground  {width: 100%; height: 100%; object-fit: cover;}
+.div2 {     
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    perspective: 300px;
+    transform:perspective(500px);
+	transform-style: preserve-3d;
+	background-color: #4682B4;
+    }
+.content:hover .div1 {
+    transform: rotateY(180deg);	
+    }
+.content:hover .div2 {
+    transform: rotateY(180deg);
+    }
+#text {
+	transform: rotateY(180deg); 
+	color: #fff; 
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 6em;
+    }
+.text1 { 
+    width: 100%; 
+    height: 100%; 
+    position: absolute;
+    top: 20%;
+    color: #000;
+    font-size: 2em;
+    font-family: 'Russo One', sans-serif; 
+    text-shadow: 0 10px 0 rgba(0,0,0,0.2);
+    transform: translateZ(1em) scale(0.94);
+    perspective: inherit;
+    backface-visibility: hidden;
+    }
+span {
+    height: 30%;
+    margin-top: 2em;
+    float: left;
+    padding: 3em;
+    font-size: 0.4em;
+    font-weight: 600;
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #000;
+    opacity: 0.5;
+    }
+.button{
+	border: 2px solid #49aa53;
+	border-radius: 15px;
+	padding: 10px 15px;
+	font-family: arial;
+	font-weight: bold;
+	font-size: 1em;
+	color:#fff;
+	background-color: #4682B4;
+	width: 170px;
+	text-align: center;
+	cursor: pointer;
+	outline:none;
+	}
+.button:hover{
+	background-color: #49aa53;
+	color: #000;
+	transition: background .4s,border-color .4s,color .4s;
+	}
+.topButton {
+    position: fixed;
+	right:5%;
+	bottom: 5%;
+    width: 70px;
+	height: 70px;
+	background: #000000;
+    display:none;
+	border-radius: 35px;
+	z-index: 4;
+	cursor: pointer;
+	object-fit: cover;
+    }
+.ArrowUp {
+	width: 100%;
+	height: 100%;
+    }
+/*О нас*/
+#about, #contact {
+	width: 100%;
+	padding: 1em;
+	text-align:  center;
+	overflow: hidden;
+	box-sizing: border-box;
+    }
+.title > h2 {font-family: 'Underdog', cursive; display: inline-block;}
+.title:before,
+.title:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 100%;
+    height: 3px;
+    background: #008000;
+    border: solid #FFF;
+    border-width: 0 50px;
+    }
+.title:before {
+    margin-left: -100%;
+    }
+.title:after {
+    margin-right: -100%;
+    }
+.text_about {
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+    }
+.block_about {
+	width: 15em;
+	margin-top: 1em;
+	padding: 1em;
+	font-size: 1.2em;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    }
+/*Контакты*/
+.address {
+	margin-top: 2em;
+	width: 30%;
+	float: left;
+	padding: 1em;
+	box-sizing: border-box;
+	font-family: 'Underdog', cursive;
+	font-weight: 600;
+    }
+.map {
+	margin-top: 2em;
+	width: 70%;
+	float: right;
+    }
+.social {
+	margin-top: 1em;
+	width: 60px;
+	height: 60px;
+    }
+/*Мобильная версия*/
+@media (max-width: 991px) {
+.phoneBlock {
+    position: absolute;
+	left:50%;
+	margin-left:-3.5em; 
+	width: 7em;
+	height: 7em;
+	background: #fff;
+	border-radius: 3.5em;
+	z-index: 2;
+    }	
+.phoneButton {
+    position: absolute;
+	left:50%;
+	margin-left:-1.75em;
+	margin-top: 1.75em;
+    width: 3.5em;
+	height: 3.5em;
+	background: #008000;
+	border-radius: 1.75em;
+	z-index: 3;
+	cursor: pointer;
+	animation: pulse-button 1s infinite;
+	background-image: url(../image/phone.png);
+    background-size: cover;	
+    }
+.content {
+    width: 100%;
+	height: 100%;
+    }
+#product { 
+    display: inline-block;
+	}
+span {text-align: center; padding: 3em;}
+.menu {font-size: 13pt; display: flex; justify-content: space-between;}
+.menu > li > a {padding: 1em;}
+.menu > li > a:hover {
+    color: #C71585;
+    border-bottom: none;
+    }
+.portfolio {
+    width: 8em;
+    height: 8em;
+    padding: 0.5em;
+    }
+.address {
+	margin-top: 2em;
+	width: 100%;
+	padding: 1em;
+	box-sizing: border-box;
+	font-family: 'Underdog', cursive;
+	font-weight: 600;
+    }
+.map {
+	margin-top: 2em;
+	width: 100%;
+    }
+ }

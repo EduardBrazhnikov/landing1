@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Underdog" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+    <title>Кондитерские изделия</title>
+	<script src="js/jquery-3.3.1.js" defer></script>
+	<script src="js/script.js" defer></script>
+</head>
+<body>
+<header class="sitecap">
+<nav>
+<ul class="menu">
+<li><a href="#contact">Контакты</a></li>
+<li><a href="#about">О нас</a></li>
+</ul>
+</nav>
+<div class="phoneBlock"><div class="phoneButton"></div></div>
+<div id="overlay">
+<div class="popup">
+<div class="popup__close">X</div>
+<div id="messegeResult"></div>
+<h4>Укажите свой номер и мы вам перезвоним</h4><br>
+<form method="post" id="formMain" name="formMain">
+<input id="logInp" type="text" name="telephone" maxlength="13" required="required" placeholder="+380*********">
+<input id="logBut" type="button" value="Отправить">
+</form>
+</div>
+</div>
+</header>
+<section id="product">
+<div class="topButton"><img class="ArrowUp" src="image/ArrowUp.png"/></div>
+<div class="content">
+<div class="div1"><p class="text1">Капкейки<br>(от 50 грн)<br>
+<span>Капкейк (буквально «чашечный торт», известен также под названием fairy cake — «сказочный торт») — американское название кекса. 
+Пирожное небольшого размера, предназначенное для употребления в пищу одним человеком, 
+запечённое в тонкой бумаге или алюминиевой форме для выпечки. Часто содержит разнообразные элементы кондитерских украшений.</span>
+<img src="image/rotating.png" style="width: 50px; height: 50px; position: relative; top: -2em;"/>
+</p>
+<img class="imgBackground" src="image/cupcakes.jpg"/>
+</div>
+<div class="div2">
+<div id="text">
+<h2>Оформление заказа</h2>
+<div id="result1"></div>
+<form method="post" id="cupcakes">
+      <input name="name1" size="45" id="name1" required="required" placeholder="Имя"><br><br>
+	  <input name="telephone1" size="45" id="telephone1" required="required" placeholder="Телефон"><br><br>
+	  <textarea rows="5" cols="45" name="coment1" required="required" placeholder="Комментарий"></textarea><br><br>
+      <input name="idProdukt1" id="target1" type="hidden" value="cupcakes">
+      <button type="submit" id ="button1" class="button">Заказать</button>
+</form>
+</div>
+</div>
+</div>
+<div class="content">
+<div class="div1"><p class="text1">Торты<br>(от 500 грн)<br>
+<span>Торт (от итал. torta, ранее от лат. tōrta, круглый хлеб) — десерт, состоящий из одного или нескольких коржей, пропитанных кремом или джемом. 
+Сверху торт обычно украшают кремом, глазурью или фруктами.</span>
+<img src="image/rotating.png" style="width: 50px; height: 50px; position: relative; top: -2em;"/>
+</p>
+<img src="image/cake.jpg" class="imgBackground"/>
+</div>
+<div class="div2">
+<div id="text">
+<h2>Оформление заказа</h2>
+<div id="result2"></div>
+<form method="post" id="cake">
+      <input name="name2" size="45" id="name2" required="required" placeholder="Имя"><br><br>
+	  <input name="telephone2" size="45" id="telephone2" required="required" placeholder="Телефон"><br><br>
+	  <textarea rows="5" cols="45" name="coment2" required="required" placeholder="Комментарий"></textarea><br><br>
+      <input name="idProdukt2" id="target2" type="hidden" value="cake">
+      <button type="submit" id ="button2" class="button">Заказать</button>
+</form>
+</div>
+</div>
+</div>
+<div class="content">
+<div class="div1"><p class="text1">Макарун<br>(от 30 грн)<br>
+<span>Макаро́н (фр. macaron, /makaʁɔ̃/) — французское кондитерское изделие из яичных белков, сахара и молотого миндаля. 
+Обычно делается в форме печенья; между двумя слоями кладут крем или варенье. 
+Итальянское название maccarone/maccherone происходит от слова ammaccare — «разбить, раздавить», 
+и является отсылкой к способу изготовления основного ингредиента, миндального порошка.</span>
+<img src="image/rotating.png" style="width: 50px; height: 50px; position: relative; top: -2em;"/>
+</p>
+<img src="image/macaroon.jpg" class="imgBackground"/>
+</div>
+<div class="div2">
+<div id="text">
+<h2>Оформление заказа</h2>
+<div id="result3"></div>
+<form method="post" id="macaroon">
+      <input name="name3" size="45" id="name3" required="required" placeholder="Имя"><br><br>
+	  <input name="telephone3" size="45" id="telephone3" required="required" placeholder="Телефон"><br><br>
+	  <textarea rows="5" cols="45" name="coment3" required="required" placeholder="Комментарий"></textarea><br><br>
+      <input name="idProdukt3" id="target3" type="hidden" value="macaroon">
+      <button type="submit" id ="button3" class="button">Заказать</button>
+</form>
+</div>
+</div>
+</div>
+<div class="content">
+<div class="div1"><p class="text1">Пирожное<br>(от 70 грн)<br>
+<span>Пиро́жное — кондитерское изделие небольшого размера из сладкого сдобного теста, обычно с кремовой начинкой.</span>
+<img src="image/rotating.png" style="width: 50px; height: 50px; position: relative; top: -2em;"/>
+</p>
+<img src="image/Blueberry.jpg" class="imgBackground"/>
+</div>
+<div class="div2">
+<div id="text">
+<h2>Оформление заказа</h2>
+<div id="result4"></div>
+<form method="post" id="blueberry">
+      <input name="name4" size="45" id="name4" required="required" placeholder="Имя"><br><br>
+	  <input name="telephone4" size="45" id="telephone4" required="required" placeholder="Телефон"><br><br>
+	  <textarea rows="5" cols="45" name="coment4" required="required" placeholder="Комментарий"></textarea><br><br>
+      <input name="idProdukt4" id="target4" type="hidden" value="blueberry">
+      <button type="submit" id ="button4" class="button">Заказать</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<section id="about">
+<div class="title">
+<h2>О нас</h2>
+</div>
+<div class="text_about">
+<div class="block_about"><img class="picture1" src="image/flower.png"/><p>Мы используем только натуральные компоненты, выращенные на органической ферме. Созданная и отработанная технология производства позволяет сохранить в полученном продукте все главные элементы (витамины, минералы, питательные вещества).</p></div>
+<div class="block_about"><img class="picture2" src="image/present.png"/><p>Мы любим наших покупателей, поэтому постоянно проводим акции и дарим подарки.</p></div>
+<div class="block_about"><img class="picture3" src="image/rocket.png"/><p>Собственная доставка. Наши кондитерские изделия слишком нежные для перевозки их обычной курьерской службой или таксистами.Поэтому мы открыли новую доставку, которая обеспечит сохранность, своевременность и температурный режим.</p></div>
+<div class="block_about"><img class="picture4" src="image/money.png"/><p>У нас Вы приобретете качественную продукцию по низкой цене. Мы постоянно монитором рынок и даем самую привлекательную цену.</p></div>
+</div>
+</section>
+<section id="contact">
+<div class="title">
+<h2>Контакты</h2>
+</div>
+<div class="address"><p>Ждем вас в нашей уютной кондитерской по адресу:<br>ул. Казацкая 71а  каждый день с 9:00 до 21:00.</p><br>
+<h3>Заказ по номеру<br>+380963412034</h3><br>
+<h3>Мы в соцсетях</h3>
+<a href="https://www.facebook.com/"><img class="social" src="image/Facebook.png"/></a>
+<a href="https://www.instagram.com/"><img class="social" src="image/Instagram.png"/></a>
+<a href="https://twitter.com/"><img class="social" src="image/Twitter.png"/></a>
+</div>
+<div class="map"><iframe src="https://www.google.com/maps/d/embed?mid=1bj2vLxRdbMlNWbnEIElh9U3rHUlrFSbL" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></div>
+</section>
+</body>
+</html>
